@@ -3,6 +3,6 @@ This projects contains the codes that we will be going through in the PIC classe
 All the projects in this listing are developed for dspic33FJ128MC802.
 
 1. IO 
-  * Input and output for ports.
+  * Input and output on PORTB.
 2. Timer 
   * Blinking LED using timer.
