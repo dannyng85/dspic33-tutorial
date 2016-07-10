@@ -8,6 +8,9 @@ int main(){
         if(PORTBbits.RB4){
             LATBbits.LATB4 = 1;   
         }
+        else{
+            LATBbits.LATB4 = 0;
+        }
     }
     return 0;
 }
