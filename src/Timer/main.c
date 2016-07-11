@@ -21,6 +21,11 @@ int main(){
         else if(GetTickCount() % 1000 != 0){
             updated = false;
         }
+        /* 
+        if(GetTickCount() % 1000 == 0 ){
+            LATBbits.LATB4 ^= 1;
+        }
+         */
     }
     return 0;
 }

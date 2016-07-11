@@ -5,7 +5,6 @@ long TimerMsTick;
 
 void TimerInitialize(){
     // Timer
-    //PR1 = 36850;
     PR1 = 7370/2;
     T1CON = 0x8000;
     IFS0bits.T1IF = 0;
