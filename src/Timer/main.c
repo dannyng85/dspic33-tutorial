@@ -4,7 +4,6 @@
 #include <xc.h>
 
 void initialize(){
-    OscInitialize();
     TimerInitialize();
     // Port Initialization
     TRISBbits.TRISB7 = 1;

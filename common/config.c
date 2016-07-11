@@ -44,9 +44,3 @@
 
 
 
-void OscInitialize(){
-    // PLL Settings
-    /*PLLFBD = 40;
-    CLKDIVbits.PLLPOST = 0;
-    while(OSCCONbits.LOCK!=1);*/
-}
