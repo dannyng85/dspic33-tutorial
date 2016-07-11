@@ -1,4 +1,5 @@
-#include<xc.h>
+#include "config.h"
+#include <xc.h>
 
 // FBS
 #pragma config BWRP = WRPROTECT_OFF     // Boot Segment Write Protect (Boot Segment may be written)
@@ -15,7 +16,7 @@
 #pragma config GSS = OFF                // General Segment Code Protection (User program memory is not code-protected)
 
 // FOSCSEL
-#pragma config FNOSC = FRCPLL           // Oscillator Mode (Internal Fast RC (FRC) with divide by N)
+#pragma config FNOSC = FRC           // Oscillator Mode (Internal Fast RC (FRC) w/ PLL)
 #pragma config IESO = OFF               // Internal External Switch Over Mode (Start-up device with user-selected oscillator source)
 
 // FOSC
@@ -38,12 +39,14 @@
 #pragma config PWMPIN = ON              // Motor Control PWM Module Pin Mode bit (PWM module pins controlled by PORT register at device Reset)
 
 // FICD
-#pragma config ICS = PGD3               // Comm Channel Select (Communicate on PGC3/EMUC3 and PGD3/EMUD3)
+#pragma config ICS = PGD1               // Comm Channel Select (Communicate on PGC1/EMUC1 and PGD1/EMUD1)
 #pragma config JTAGEN = OFF             // JTAG Port Enable (JTAG is Disabled)
+
+
 
 void OscInitialize(){
     // PLL Settings
+    /*PLLFBD = 40;
     CLKDIVbits.PLLPOST = 0;
-    PLLFBD = 40;
-    while(OSCCONbits.LOCK!=1);
+    while(OSCCONbits.LOCK!=1);*/
 }
