@@ -7,14 +7,14 @@ int qei_Rev2 = 0;
 
 void QEIInitialize(int MaxCount){
     // QEI 1
-    QEI1CON = 0x0744;
+    QEI1CON = 0x0700;
     DFLT1CON = 0x0170;
     MAX1CNT = MaxCount;
     IFS3bits.QEI1IF = 0;
     IEC3bits.QEI1IE = 1;
 
     // QEI 2
-    QEI2CON = 0x0744;
+    QEI2CON = 0x0780;
     DFLT2CON = 0x0170;
     MAX2CNT = MaxCount;
     IFS4bits.QEI2IF = 0;

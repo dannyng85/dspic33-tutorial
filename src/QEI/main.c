@@ -50,6 +50,9 @@ int main(){
             float vRight = (distanceRightCurrent - distanceRight)/ dt;
             
             // Do something
+            // 1. Control Mtotor - PWM
+            // 2. Control Alghorithm - PID - P controller
+            // 3. Kinematics
             
             distanceLeft = distanceLeftCurrent;
             distanceRight = distanceRightCurrent;
