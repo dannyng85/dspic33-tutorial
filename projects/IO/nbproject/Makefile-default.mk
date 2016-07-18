@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../src/IO/main.c ../../common/config.c
+SOURCEFILES_QUOTED_IF_SPACED=../../common/config.c ../../src/IO/main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/868745519/main.o ${OBJECTDIR}/_ext/1329223797/config.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/868745519/main.o.d ${OBJECTDIR}/_ext/1329223797/config.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/868745519/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1329223797/config.o.d ${OBJECTDIR}/_ext/868745519/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/868745519/main.o ${OBJECTDIR}/_ext/1329223797/config.o
+OBJECTFILES=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/868745519/main.o
 
 # Source Files
-SOURCEFILES=../../src/IO/main.c ../../common/config.c
+SOURCEFILES=../../common/config.c ../../src/IO/main.c
 
 
 CFLAGS=
@@ -82,13 +82,6 @@ MP_LINKER_FILE_OPTION=,--script=p33FJ128MC802.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/868745519/main.o: ../../src/IO/main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/868745519" 
-	@${RM} ${OBJECTDIR}/_ext/868745519/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/868745519/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/IO/main.c  -o ${OBJECTDIR}/_ext/868745519/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/868745519/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/868745519/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/1329223797/config.o: ../../common/config.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
 	@${RM} ${OBJECTDIR}/_ext/1329223797/config.o.d 
@@ -96,20 +89,27 @@ ${OBJECTDIR}/_ext/1329223797/config.o: ../../common/config.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/config.c  -o ${OBJECTDIR}/_ext/1329223797/config.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/config.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/config.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-else
 ${OBJECTDIR}/_ext/868745519/main.o: ../../src/IO/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/868745519" 
 	@${RM} ${OBJECTDIR}/_ext/868745519/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/868745519/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/IO/main.c  -o ${OBJECTDIR}/_ext/868745519/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/868745519/main.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/IO/main.c  -o ${OBJECTDIR}/_ext/868745519/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/868745519/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/868745519/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+else
 ${OBJECTDIR}/_ext/1329223797/config.o: ../../common/config.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
 	@${RM} ${OBJECTDIR}/_ext/1329223797/config.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1329223797/config.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/config.c  -o ${OBJECTDIR}/_ext/1329223797/config.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/config.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/config.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/868745519/main.o: ../../src/IO/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/868745519" 
+	@${RM} ${OBJECTDIR}/_ext/868745519/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/868745519/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/IO/main.c  -o ${OBJECTDIR}/_ext/868745519/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/868745519/main.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/868745519/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

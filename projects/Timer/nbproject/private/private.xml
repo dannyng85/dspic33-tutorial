@@ -7,11 +7,6 @@
             <file>file:/D:/Codes/microchip/dspic33-tutorial/src/IO/main.c</file>
         </group>
         <group name="dspic33-tutorial"/>
-        <group name="dspic33-tutorial-projects">
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/src/Timer/main.c</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/config.c</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/timer.c</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/src/IO/main.c</file>
-        </group>
+        <group name="dspic33-tutorial-projects"/>
     </open-files>
 </project-private>
