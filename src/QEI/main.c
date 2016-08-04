@@ -28,6 +28,11 @@ void initialize(){
     RPINR16bits.QEA2R = QEI2_A;
     RPINR16bits.QEB2R = QEI2_B;
     //RPINR17bits.INDX2R = QEI2_I;
+    
+    // PWM Setting
+    
+    RPOR4bits.RP8R = 0b10010;
+    RPOR4bits.RP9R = 0b10011;
 
     IOLock;
 }
@@ -49,10 +54,7 @@ int main(){
             float vLeft = (distanceLeftCurrent - distanceLeft)/ dt;
             float vRight = (distanceRightCurrent - distanceRight)/ dt;
             
-            // Do something
-            // 1. Control Mtotor - PWM
-            // 2. Control Alghorithm - PID - P controller
-            // 3. Kinematics
+            
             
             distanceLeft = distanceLeftCurrent;
             distanceRight = distanceRightCurrent;

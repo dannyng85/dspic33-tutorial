@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../common/config.c ../../common/timer.c ../../src/QEI/main.c ../../common/qei.c
+SOURCEFILES_QUOTED_IF_SPACED=../../common/config.c ../../common/timer.c ../../common/qei.c ../../src/QEI/main.c ../../common/pwm.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/qei.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1329223797/config.o.d ${OBJECTDIR}/_ext/1329223797/timer.o.d ${OBJECTDIR}/_ext/1161299862/main.o.d ${OBJECTDIR}/_ext/1329223797/qei.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/pwm.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1329223797/config.o.d ${OBJECTDIR}/_ext/1329223797/timer.o.d ${OBJECTDIR}/_ext/1329223797/qei.o.d ${OBJECTDIR}/_ext/1161299862/main.o.d ${OBJECTDIR}/_ext/1329223797/pwm.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/qei.o
+OBJECTFILES=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/pwm.o
 
 # Source Files
-SOURCEFILES=../../common/config.c ../../common/timer.c ../../src/QEI/main.c ../../common/qei.c
+SOURCEFILES=../../common/config.c ../../common/timer.c ../../common/qei.c ../../src/QEI/main.c ../../common/pwm.c
 
 
 CFLAGS=
@@ -96,6 +96,13 @@ ${OBJECTDIR}/_ext/1329223797/timer.o: ../../common/timer.c  nbproject/Makefile-$
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/timer.c  -o ${OBJECTDIR}/_ext/1329223797/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/timer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1329223797/qei.o: ../../common/qei.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/qei.c  -o ${OBJECTDIR}/_ext/1329223797/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/qei.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1161299862" 
 	@${RM} ${OBJECTDIR}/_ext/1161299862/main.o.d 
@@ -103,12 +110,12 @@ ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/QEI/main.c  -o ${OBJECTDIR}/_ext/1161299862/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1161299862/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1161299862/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/1329223797/qei.o: ../../common/qei.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1329223797/pwm.o: ../../common/pwm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
-	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/qei.c  -o ${OBJECTDIR}/_ext/1329223797/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/qei.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/pwm.c  -o ${OBJECTDIR}/_ext/1329223797/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/pwm.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/pwm.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/_ext/1329223797/config.o: ../../common/config.c  nbproject/Makefile-${CND_CONF}.mk
@@ -125,6 +132,13 @@ ${OBJECTDIR}/_ext/1329223797/timer.o: ../../common/timer.c  nbproject/Makefile-$
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/timer.c  -o ${OBJECTDIR}/_ext/1329223797/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/timer.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1329223797/qei.o: ../../common/qei.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/qei.c  -o ${OBJECTDIR}/_ext/1329223797/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/qei.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1161299862" 
 	@${RM} ${OBJECTDIR}/_ext/1161299862/main.o.d 
@@ -132,12 +146,12 @@ ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/QEI/main.c  -o ${OBJECTDIR}/_ext/1161299862/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1161299862/main.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1161299862/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/1329223797/qei.o: ../../common/qei.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1329223797/pwm.o: ../../common/pwm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
-	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1329223797/qei.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/qei.c  -o ${OBJECTDIR}/_ext/1329223797/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/qei.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/pwm.c  -o ${OBJECTDIR}/_ext/1329223797/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/pwm.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/pwm.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

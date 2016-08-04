@@ -9,6 +9,7 @@
         <itemPath>../../common/timer.h</itemPath>
         <itemPath>../../common/typedef.h</itemPath>
         <itemPath>../../common/qei.h</itemPath>
+        <itemPath>../../common/pwm.h</itemPath>
       </logicalFolder>
       <itemPath>../../src/QEI/hardwareConfig.h</itemPath>
     </logicalFolder>
@@ -23,6 +24,7 @@
         <itemPath>../../common/config.c</itemPath>
         <itemPath>../../common/timer.c</itemPath>
         <itemPath>../../common/qei.c</itemPath>
+        <itemPath>../../common/pwm.c</itemPath>
       </logicalFolder>
       <itemPath>../../src/QEI/main.c</itemPath>
     </logicalFolder>
