@@ -7,6 +7,12 @@
             <file>file:/D:/Codes/microchip/dspic33-tutorial/src/IO/main.c</file>
         </group>
         <group name="dspic33-tutorial"/>
-        <group name="dspic33-tutorial-projects"/>
+        <group name="dspic33-tutorial-projects">
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/qei.c</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.c</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/qei.h</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/typedef.h</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.h</file>
+        </group>
     </open-files>
 </project-private>

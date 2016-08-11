@@ -16,4 +16,5 @@
     // Robot variables
     #define wheelCircumference 150.0
     #define encoderMaxCount 2000.0
+    #define wheelMaxSpeed 100
 #endif
