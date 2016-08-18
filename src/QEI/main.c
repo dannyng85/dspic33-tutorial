@@ -3,6 +3,8 @@
 #include "typedef.h"
 #include "qei.h"
 #include "hardwareConfig.h"
+#include "pid.h"
+#include "pwm.h"
 #include <xc.h>
 
 #define IOUnlock asm volatile ("MOV #OSCCON, w1\n""MOV #0x46, w2\n""MOV #0x57, w3\n""MOV.b w2, [w1]\n""MOV.b w3, [w1]\n""BCLR OSCCON,#6")
@@ -42,9 +44,20 @@ int main() {
     QEIResult encoderLeft, encoderRight;
     float distanceLeft = 0;
     float distanceRight = 0;
-    float vLeftSetPoint = 0.5, vRightSetPoint = 0.5;
-    float pwmLeft, pwmRight;
+    float pwmLeft = 0, pwmRight = 0;
+    PID pLeft, pRight;
+    pLeft.Kp = 1;
+    pLeft.Ki = 0;
+    pLeft.Kd = 0;
+    pLeft.dt = 0.1;
+    pRight.Kp = 1;
+    pRight.Ki = 0;
+    pRight.Kd = 0;
+    pRight.dt = 0.1;
     initialize();
+    
+    pRight.SetPoint = 0.05;
+    pLeft.SetPoint = 0.05;
     while (true) {
         if (GetTickCount() % dt == 0 && !updated) {
             updated = true;
@@ -54,18 +67,31 @@ int main() {
             float distanceRightCurrent = encoderRight.Rev * wheelCircumference + encoderRight.Pos / encoderMaxCount * wheelCircumference;
             float vLeft = (distanceLeftCurrent - distanceLeft) / dt;
             float vRight = (distanceRightCurrent - distanceRight) / dt;
-            float vLeftNorm = vLeft / wheelMaxSpeed;
-            float vRightNorm = vRight / wheelMaxSpeed;
-            float vLeftError = vLeftSetPoint - vLeftNorm;
-            float vRightError = vRightSetPoint - vRightNorm;
-
-            float pwmLeftStep = vLeftError * 20 > 10 ? 10 : vLeftError * 20 < -10 ? -10 : vLeftError * 20;
-            pwmLeft += pwmLeftStep;
             
+            pLeft.CurrentMeasurement = vLeft;
+            pRight.CurrentMeasurement = vRight;
             
+            PID_Execute(&pLeft);
+            PID_Execute(&pRight);
+            float gain = 10;
+            pwmLeft += gain * (pLeft.Result > 100 ? 100 : pLeft.Result < -100 ? -100 : pLeft.Result);
+            pwmRight += gain * (pRight.Result > 100 ? 100 : pRight.Result < -100 ? -100 : pRight.Result); 
             
+            if(pwmLeft > 0){
+                // Set Dir Pin
+            }
+            else if(pwmLeft < 0){
+                // Set Dir Pin
+            }
+            if(pwmRight > 0){
+                // Set Dir Pin
+            }
+            else if(pwmRight < 0){
+                // Set Dir Pin
+            }
             setPWM(1, pwmLeft);
             setPWM(2, pwmRight);
+            
             distanceLeft = distanceLeftCurrent;
             distanceRight = distanceRightCurrent;
             LED ^= 1;

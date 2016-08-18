@@ -8,11 +8,12 @@
         </group>
         <group name="dspic33-tutorial"/>
         <group name="dspic33-tutorial-projects">
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/qei.c</file>
             <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.c</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/qei.h</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/typedef.h</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.h</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/timer.c</file>
+        </group>
+        <group name="PIC32">
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/timer.c</file>
+            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.c</file>
         </group>
     </open-files>
 </project-private>

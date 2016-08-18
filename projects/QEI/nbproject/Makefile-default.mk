@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../common/config.c ../../common/timer.c ../../common/qei.c ../../common/pwm.c ../../src/QEI/main.c
+SOURCEFILES_QUOTED_IF_SPACED=../../common/config.c ../../common/timer.c ../../common/qei.c ../../common/pwm.c ../../src/QEI/main.c ../../common/pid.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1329223797/pwm.o ${OBJECTDIR}/_ext/1161299862/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1329223797/config.o.d ${OBJECTDIR}/_ext/1329223797/timer.o.d ${OBJECTDIR}/_ext/1329223797/qei.o.d ${OBJECTDIR}/_ext/1329223797/pwm.o.d ${OBJECTDIR}/_ext/1161299862/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1329223797/pwm.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/pid.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1329223797/config.o.d ${OBJECTDIR}/_ext/1329223797/timer.o.d ${OBJECTDIR}/_ext/1329223797/qei.o.d ${OBJECTDIR}/_ext/1329223797/pwm.o.d ${OBJECTDIR}/_ext/1161299862/main.o.d ${OBJECTDIR}/_ext/1329223797/pid.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1329223797/pwm.o ${OBJECTDIR}/_ext/1161299862/main.o
+OBJECTFILES=${OBJECTDIR}/_ext/1329223797/config.o ${OBJECTDIR}/_ext/1329223797/timer.o ${OBJECTDIR}/_ext/1329223797/qei.o ${OBJECTDIR}/_ext/1329223797/pwm.o ${OBJECTDIR}/_ext/1161299862/main.o ${OBJECTDIR}/_ext/1329223797/pid.o
 
 # Source Files
-SOURCEFILES=../../common/config.c ../../common/timer.c ../../common/qei.c ../../common/pwm.c ../../src/QEI/main.c
+SOURCEFILES=../../common/config.c ../../common/timer.c ../../common/qei.c ../../common/pwm.c ../../src/QEI/main.c ../../common/pid.c
 
 
 CFLAGS=
@@ -117,6 +117,13 @@ ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/QEI/main.c  -o ${OBJECTDIR}/_ext/1161299862/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1161299862/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1161299862/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1329223797/pid.o: ../../common/pid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pid.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pid.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/pid.c  -o ${OBJECTDIR}/_ext/1329223797/pid.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/pid.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/pid.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/_ext/1329223797/config.o: ../../common/config.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
@@ -152,6 +159,13 @@ ${OBJECTDIR}/_ext/1161299862/main.o: ../../src/QEI/main.c  nbproject/Makefile-${
 	@${RM} ${OBJECTDIR}/_ext/1161299862/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../src/QEI/main.c  -o ${OBJECTDIR}/_ext/1161299862/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1161299862/main.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1161299862/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1329223797/pid.o: ../../common/pid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1329223797" 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pid.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1329223797/pid.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../common/pid.c  -o ${OBJECTDIR}/_ext/1329223797/pid.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1329223797/pid.o.d"        -g -omf=elf -legacy-libc  -O0 -I"../../common" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1329223797/pid.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

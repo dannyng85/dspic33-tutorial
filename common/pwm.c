@@ -15,6 +15,8 @@ void pwmInit(){
 
 void setPWM(byte channel, float dutyCycle){
     // Calculate Duty cycle
+    dutyCycle *= dutyCycle < 0 ? -1 : 1;  
+    dutyCycle = dutyCycle > 100 ? 100 : dutyCycle;  
     switch(channel){
         case 1:
             OC1RS = dutyCycle / 100 * (PR2 + 1);

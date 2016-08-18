@@ -4,4 +4,6 @@ build/default/production/_ext/1161299862/main.o:  \
 ../../common/timer.h  \
 ../../common/typedef.h  \
  ../../common/qei.h  \
-../../src/QEI/hardwareConfig.h 
+../../src/QEI/hardwareConfig.h  \
+../../common/pid.h  \
+ ../../common/pwm.h 
