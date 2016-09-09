@@ -7,13 +7,10 @@
             <file>file:/D:/Codes/microchip/dspic33-tutorial/src/IO/main.c</file>
         </group>
         <group name="dspic33-tutorial"/>
-        <group name="dspic33-tutorial-projects">
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.c</file>
-            <file>file:/D:/Codes/microchip/dspic33-tutorial/common/timer.c</file>
-        </group>
         <group name="PIC32">
             <file>file:/D:/Codes/microchip/dspic33-tutorial/common/timer.c</file>
             <file>file:/D:/Codes/microchip/dspic33-tutorial/common/pwm.c</file>
         </group>
+        <group name="dspic33-tutorial-projects"/>
     </open-files>
 </project-private>

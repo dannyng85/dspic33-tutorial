@@ -7,7 +7,7 @@
             <file>file:/D:/Codes/microchip/dspic33-tutorial/common/config.h</file>
             <file>file:/D:/Codes/microchip/dspic33-tutorial/src/IO/main.c</file>
         </group>
-        <group name="dspic33-tutorial-projects"/>
         <group name="PIC32"/>
+        <group name="dspic33-tutorial-projects"/>
     </open-files>
 </project-private>
